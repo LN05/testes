@@ -75,13 +75,16 @@ body {
 .sidebar ul li a{
     color: #FFF;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
+    transition: 1s;
     display: block;
 }
 
 .sidebar ul li a:hover{
-    background-color: #8f8a8a;
+    background-color: #2d4595;
+    margin-right: -6px;
+    margin-left: -35px;
     transition: 0.5s;
 }
 
@@ -105,14 +108,38 @@ body {
 .logo-img {
     width: 55px;
     min-height: 40px;
+    position: relative;
+    top: -10px;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.5s;
     margin-left: 30px;
 }
 
+#desconectar{
+    position: fixed;
+    top: 610px;
+    height: 35px;
+    padding: 1px;
+    margin-left: -8px;
+    margin-bottom: 24px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 550;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
 .logo-img:hover {
     transform: scale(2.0);
+}
+
+.agendamento{
+    margin-left: 59px;
+    position: relative;
+    top: 2px;
 }
 
 /* INÍCIO CALENDÁRIO */
@@ -121,7 +148,8 @@ body {
     position: relative;
     width: 270px;
     height: 330px;
-    background: rgba(255, 255, 255, 0.1);
+    margin-left: -12px;
+    background: #2f3336;
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -141,27 +169,28 @@ body {
 
 #dycalendar table{
     width: 100%;
-    margin-top: 25px;
+    margin-left: 1px;
+    margin-top: 40px;
     border-spacing: 5px;
 }
 
 #dycalendar table tr:nth-child(1) td{
-    background: #FFF;
-    color: #111;
+    background: #2d4595;
+    color: #fff;
     border-radius: 4px;
     font-weight: 600;
 }
 
 #dycalendar table td{
-    color: #000;
-    padding: 4px;
+    color: #fff;
+    padding: 6px;
     cursor: pointer;
     border-radius: 4px;
 }
 
 #dycalendar table td:hover{
     background: #2d4595;
-    color: #111;
+    color: #fff;
 }
 
 .dycalendar-month-container .dycalendar-today-date, .dycalendar-month-container .dycalendar-target-date{
@@ -171,7 +200,7 @@ body {
 
 .dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn{
     background: #2d4595;
-    color: #111;
+    color: #fff;
     width: 35px;
     height: 35px;
     padding: 1px;
@@ -186,7 +215,7 @@ body {
 
 .dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn{
     background: #2d4595;
-    color: #111;
+    color: #fff;
     width: 35px;
     height: 35px;
     padding: 1px;

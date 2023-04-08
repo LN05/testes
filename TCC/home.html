@@ -36,14 +36,20 @@
         <header class="sidebar-header">
             <img class="logo-img" src="https://github.com/gustavosantana11/tcc-barbearia/blob/main/TCC/imagens/Barbeiro_Aquiles.jpg?raw=true" alt="Foto do Barbeiro" />
         </header>
+        <!-- Botão de Transição Agendamento com o Calendário -->
         <ul>
-            <li><a href="#" class="agendamento">AGENDAMENTO<span class="material-icons seta1">arrow_right
-            </span></a>      
+            <li><a href="#" class="agendamento">AGENDAMENTO</a>
                 <ul class="itemAgendamento"></ul> <li></li>
                         <div class="container">
-                        <div id="dycalendar"></div>
+                        <div id="dycalendar">
+                        </div>
                     </div>
             </li>
+
+            <!-- Botão Desconectar -->
+
+            <button id="desconectar">DESCONECTAR</button>
+
         </ul>
     </nav>
 
@@ -172,6 +178,8 @@
         crossorigin="anonymous"></script>
 
     <script src="js/home.js"></script>
+
+    <!-- Script de Import do Calendário -->
 
     <script src="dycalendar.js"></script>
     <script>
