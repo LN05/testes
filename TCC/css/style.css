@@ -280,11 +280,12 @@ body {
 }
 
 .main {
-    margin-left: 250px;
+    margin-left: 326px; /* 250px era qual estav aqui porem como aumento a sidebar tava cobrindo faz teste com o 250 se conseguir puxar so os elementos coloca o 250px de volta*/
     margin-right: 6px;
     overflow: hidden;
 
 }
+
 
 /* Ajustar a SideBar com somente os ícones */
 @media (width < 920px) {
