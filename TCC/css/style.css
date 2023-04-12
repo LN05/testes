@@ -118,18 +118,26 @@ body {
 
 #desconectar{
     position: fixed;
-    top: 610px;
-    height: 35px;
-    padding: 1px;
-    margin-left: -8px;
+    top: 618px;
+    padding-left: 7px;
+    width: 100px;
+    height: 28px;
+    margin-left: 25px;
     margin-bottom: 24px;
     background-color: #ff0000;
     color: #fff;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 550;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
     font-family: sans-serif;
     cursor: pointer;
+}
+
+.porta{
+    width: 25px;
+    position: fixed;
+    top: 620px;
+    margin-left: -10px;
 }
 
 .logo-img:hover {
@@ -140,6 +148,110 @@ body {
     margin-left: 59px;
     position: relative;
     top: 2px;
+}
+
+#adicionar-agendamento{
+    position: fixed;
+    top: 85px;
+    padding-left: 24px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #2d4595;
+    color: #fff;
+    border-color: #2d4595;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#editar-agendamento{
+    position: fixed;
+    top: 130px;
+    padding-left: 28px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #00804b;
+    color: #fff;
+    border-color: #00804b;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#excluir-agendamento{
+    position: fixed;
+    top: 175px;
+    padding-left: 33px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#adicionar-disponibilidade{
+    position: fixed;
+    top: 220px;
+    padding-left: 30px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #444;
+    color: #fff;
+    border-color: #444;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.add{
+    width: 21px;
+    margin-left: 24px;
+    position: fixed;
+    top: 90px;
+}
+
+.lapis{
+    width: 15px;
+    margin-left: 28px;
+    position: fixed;
+    top: 138px;
+}
+
+.lixeira{
+    width: 16px;
+    margin-left: 26px;
+    position: fixed;
+    top: 182px;
+}
+
+.bloqueio{
+    width: 16px;
+    margin-left: 27px;
+    position: fixed;
+    top: 228px;
+}
+
+.tabela{
+    margin-top: -65px;
+    margin-left: -55px;
+}
+
+.relogio{
+    width: 18px;
+    margin-left: -10px;
+    position: fixed;
+    top: 76px;
 }
 
 /* INÍCIO CALENDÁRIO */
