@@ -88,105 +88,202 @@
 
     <div class="main">
        
-         <button type="button" class="btn btn-primary" id="adicionar-agendamento" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    NOVO AGENDAMENTO
-  </button>
+          <!-- Button trigger modal -->
+    <button onclick="mostrar_modalAgendamento()" type="button" class="btn btn-primary" id="adicionar-agendamento"
+      data-bs-toggle="modal">
+      NOVO AGENDAMENTO
+    </button>
 
-  <img class="add" src="images/add.png" alt="adicionar">
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" style="color: black;">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <img class="add" src="imagens/add.png" alt="adicionar">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_novoAgendamento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="label_agendamento">
+              <p> <span class="title-modal">CADASTRAR AGENDAMENTO</span> <br />
+                <span class="title-modal-underline"> INFORMAÇÕES DO CLIENTE: </span>
+              </p>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="servico" class="form-label">SERVIÇO (S)</label>
+              <input type="text" class="form-control" id="servico">
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">TELEFONE</label>
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+            <div class="mb-3">
+              <label for="pagamento" class="form-label">FORMA DE PAGAMENTO</label>
+              <input type="text" class="form-control" id="pagamento">
+            </div>
+            <div class="mb-3">
+              <label for="observacao" class="form-label">OBSERVAÇÃO (opicional)</label>
+              <input type="text" class="form-control" id="observacao">
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">CRIAR AGENDAMENTO</button>
+          </div>
         </div>
-        <div class="modal-body">
-          ...
+      </div>
+    </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
+
+    <button onclick="mostrar_modalEditar()" type="button" class="btn btn-primary" id="editar-agendamento"
+      data-bs-toggle="modal">
+      EDITAR AGENDAMENTO
+    </button>
+
+    <img class="lapis" src="imagens/lapis.png" alt="lapis">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_editarAgendamento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="label_editar">EDITAR AGENDAMENTO</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="servico" class="form-label">SERVIÇO (S)</label>
+              <input type="text" class="form-control" id="servico">
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">TELEFONE</label>
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+            <div class="mb-3">
+              <label for="pagamento" class="form-label">FORMA DE PAGAMENTO</label>
+              <input type="text" class="form-control" id="pagamento">
+            </div>
+            <div class="mb-3">
+              <label for="observacao" class="form-label">OBSERVAÇÃO (opicional)</label>
+              <input type="text" class="form-control" id="observacao">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">EDITAR AGENDAMENTO</button>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
+
+    <button onclick="mostrar_modalExcluir()" type="button" class="btn btn-primary" id="excluir-agendamento"
+      data-bs-toggle="modal">
+      EXCLUIR AGENDAMENTO
+    </button>
+
+    <img class="lixeira" src="imagens/lixeira.png" alt="lixeira">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_excluirAgendamento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="label_excluirAgendamento"> EXCLUIR AGENDAMENTO </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="servico" class="form-label">SERVIÇO (S)</label>
+              <input type="text" class="form-control" id="servico">
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">TELEFONE</label>
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+            <div class="mb-3">
+              <label for="pagamento" class="form-label">FORMA DE PAGAMENTO</label>
+              <input type="text" class="form-control" id="pagamento">
+            </div>
+            <div class="mb-3">
+              <label for="observacao" class="form-label">JUSTIFICATIVA</label>
+              <input type="text" class="form-control" id="observacao">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"> EXCLUIR AGENDAMENTIO</button>
+          </div>
+        </div>
+      </div>
+    </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
+
+    <button onclick="mostrar_modalDisponibilidade()" type="button" class="btn btn-primary"
+      id="adicionar-disponibilidade">
+      CADASTRAR AUSÊNCIA
+    </button>
+
+    <img class="bloqueio" src="imagens/bloqueio.png" alt="bloqueio">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_addDisponibilidade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="label_disponibilidade">
+              <p> <span class="title-modal">CADASTRAR AUSÊNCIA</span> <br />
+                <span class="title-modal-underline"> PROFISSIONAL </span>
+              </p>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="justificativa" class="form-label">JUSTIFICATIVA</label>
+              <input type="text" class="form-control" id="justificativa">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">CONFIRMAR AUSÊNCIA</button>
+          </div>
         </div>
       </div>
     </div>
-  </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
-  
-  <button type="button" class="btn btn-primary" id="editar-agendamento" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    EDITAR AGENDAMENTO
-  </button>
-
-  <img class="lapis" src="images/lapis.png" alt="lapis">
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" style="color: black;">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
-
-  <button type="button" class="btn btn-primary" id="excluir-agendamento" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    EXCLUIR AGENDAMENTO
-  </button>
-
-  <img class="lixeira" src="images/lixeira.png" alt="lixeira">
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" style="color: black;">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
-  
-  <button type="button" class="btn btn-primary" id="adicionar-disponibilidade" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    CADASTRAR AUSÊNCIA
-  </button>
-
-  <img class="bloqueio" src="images/bloqueio.png" alt="bloqueio">
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" style="color: black;">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
         <div class="tabela">
             <table>
