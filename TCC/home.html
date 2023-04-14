@@ -17,7 +17,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="dycalendar.css" >
+    <link rel="stylesheet" href="css/dycalendar.css" >
 
     <link rel="stylesheet" href="css/style.css" >
 
@@ -30,11 +30,24 @@
           <p> <span class="label1">DON</span> <br/>
             <span class="label2">KING</span> </p>
         </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img class="sino" src="imagens/sino.png" alt="sino">
+          </button>
+          <div class="dropdown-content">
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+          </div>
+          <div class="rectangle"></div>
+        </div>
       </nav> 
 
     <nav class="sidebar">
         <header class="sidebar-header">
-            <img class="logo-img" src="https://github.com/gustavosantana11/tcc-barbearia/blob/main/TCC/imagens/Barbeiro_Aquiles.jpg?raw=true" alt="Foto do Barbeiro" />
+            <img class="logo-img" src="imagens/barbeiroAquiles.jpg" alt="Foto do Barbeiro" />
         </header>
         <!-- Botão de Transição Agendamento com o Calendário -->
         <ul>
@@ -50,14 +63,14 @@
 
             <button id="desconectar">DESCONECTAR</button>
 
-            <img class="porta" src="images/porta.png" alt="porta">
+            <img class="porta" src="imagens/porta.png" alt="porta">
 
         </ul>
     </nav>
 
     <script type="text/javascript" src="js/home.js"></script>
 
-    <script src="dycalendar.js"></script>
+    <script src="js/dycalendar.js"></script>
 
     <!-- Menu para Mobile-->
 
@@ -84,7 +97,7 @@
 
     <script src="js/home.js"></script>
 
-    <script src="dycalendar.js"></script>
+    <script src="js/dycalendar.js"></script>
 
     <div class="main">
        
@@ -102,8 +115,8 @@
         <div class="modal-content" style="color: black;">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="label_agendamento">
-              <p> <span class="title-modal">CADASTRAR AGENDAMENTO</span> <br />
-                <span class="title-modal-underline"> INFORMAÇÕES DO CLIENTE: </span>
+              <p> <span class="title-modal" id="title-modal1">CADASTRAR AGENDAMENTO</span> <br />
+                <span class="title-modal-underline"> INFORMAÇÕES DO CLIENTE </span>
               </p>
             </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -131,13 +144,13 @@
               <input type="text" class="form-control" id="pagamento">
             </div>
             <div class="mb-3">
-              <label for="observacao" class="form-label">OBSERVAÇÃO (opicional)</label>
+              <label for="observacao" class="form-label">OBSERVAÇÃO (opcional)</label>
               <input type="text" class="form-control" id="observacao">
             </div>
             
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">CRIAR AGENDAMENTO</button>
+            <button type="button" class="btn btn-primary" id="button-criar">CRIAR AGENDAMENTO</button>
           </div>
         </div>
       </div>
@@ -155,7 +168,7 @@
       <div class="modal-dialog">
         <div class="modal-content" style="color: black;">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="label_editar">EDITAR AGENDAMENTO</h1>
+            <h1 class="modal-title fs-5" id="title-modal2">EDITAR AGENDAMENTO</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -181,13 +194,13 @@
               <input type="text" class="form-control" id="pagamento">
             </div>
             <div class="mb-3">
-              <label for="observacao" class="form-label">OBSERVAÇÃO (opicional)</label>
+              <label for="observacao" class="form-label">OBSERVAÇÃO (opcional)</label>
               <input type="text" class="form-control" id="observacao">
             </div>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">EDITAR AGENDAMENTO</button>
+            <button type="button" class="btn btn-primary" id="button-editar">EDITAR AGENDAMENTO</button>
           </div>
         </div>
       </div>
@@ -205,7 +218,7 @@
       <div class="modal-dialog">
         <div class="modal-content" style="color: black;">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="label_excluirAgendamento"> EXCLUIR AGENDAMENTO </h1>
+            <h1 class="modal-title fs-5" id="title-modal3"> EXCLUIR AGENDAMENTO </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -218,18 +231,7 @@
               <label for="horario" class="form-label">HORÁRIO</label>
               <input type="time" class="form-control" id="horario">
             </div>
-            <div class="mb-3">
-              <label for="servico" class="form-label">SERVIÇO (S)</label>
-              <input type="text" class="form-control" id="servico">
-            </div>
-            <div class="mb-3">
-              <label for="telefone" class="form-label">TELEFONE</label>
-              <input type="tel" class="form-control" id="telefone">
-            </div>
-            <div class="mb-3">
-              <label for="pagamento" class="form-label">FORMA DE PAGAMENTO</label>
-              <input type="text" class="form-control" id="pagamento">
-            </div>
+
             <div class="mb-3">
               <label for="observacao" class="form-label">JUSTIFICATIVA</label>
               <input type="text" class="form-control" id="observacao">
@@ -237,7 +239,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary"> EXCLUIR AGENDAMENTIO</button>
+            <button type="button" class="btn btn-primary" id="button-excluir"> EXCLUIR AGENDAMENTO</button>
           </div>
         </div>
       </div>
@@ -256,8 +258,8 @@
         <div class="modal-content" style="color: black;">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="label_disponibilidade">
-              <p> <span class="title-modal">CADASTRAR AUSÊNCIA</span> <br />
-                <span class="title-modal-underline"> PROFISSIONAL </span>
+              <p> <span class="title-modal" id="title-modal4">CADASTRAR AUSÊNCIA</span> <br />
+                <span id="nome-profissional"> PROFISSIONAL </span>
               </p>
             </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -265,7 +267,7 @@
           <div class="modal-body">
 
             <div class="mb-3">
-              <label for="nome" class="form-label">NOME</label>
+              <label for="nome" class="form-label">PROFISSIONAL</label>
               <input type="text" class="form-control" id="nome">
             </div>
             <div class="mb-3">
@@ -279,7 +281,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">CONFIRMAR AUSÊNCIA</button>
+            <button type="button" class="btn btn-primary" id="button-ausencia">CONFIRMAR AUSÊNCIA</button>
           </div>
         </div>
       </div>
@@ -290,10 +292,10 @@
                 <thead>
                     <tr>
                         <th>
-                            <img class="relogio" src="images/relogio.png" alt="relogio">
+                            <img class="relogio" src="imagens/relogio.png" alt="relogio">
                             
                         </th>
-                        <th>Clientes Agendados</th>
+                        <th class="clientes">Clientes Agendados</th>
                         <th class="checkin"> CHECK - IN </th>
 
                     </tr>
@@ -301,14 +303,20 @@
                 <tbody>
                     <tr>
                         <td class="num">09:00</td>
-                        <td> OSCAR </td>
-                        <td>5</td>
+                        <td class="nome"> GUSTAVO </td>
+                        <td>
+                    <button id="botao-correto"><img class="correto" src="imagens/correto.png" alt="correto"></button>
+                    <button id="botao-xzinho"><img class="xzinho" src="imagens/xzinho.png" alt="xzinho"></button>
+                        </td>
 
                     </tr>
                     <tr>
                         <td class="num">10:00</td>
-                        <td>MARCOS</td>
-                        <td>8</td>
+                        <td class="nome"> LUCAS </td>
+                        <td>
+                    <button id="botao-correto"><img class="correto" src="imagens/correto.png" alt="correto"></button>
+                    <button id="botao-xzinho"><img class="xzinho" src="imagens/xzinho.png" alt="xzinho"></button>
+                        </td>
                     </tr>
                     <tr>
                         <td class="num">11:00</td>
@@ -375,7 +383,7 @@
 
     <!-- Script de Import do Calendário -->
 
-    <script src="dycalendar.js"></script>
+    <script src="js/dycalendar.js"></script>
     <script>
         dycalendar.draw({
           target: '#dycalendar',

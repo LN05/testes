@@ -69,4 +69,3 @@ function mostrar_modalAdmExcluirCliente() {
     myModal.show();
 }
 
-

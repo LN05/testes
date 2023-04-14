@@ -14,10 +14,12 @@
 
     <nav id="nav" class="navbar" data-bs-theme="#121212">
         <div class="container-fluid">
+          <img class="logo-img" src="imagens/masterKaiky.jpg" alt="Foto do ADM-Master" />
+
             <p> <span class="label1">DON</span> <br />
                 <span class="label2">KING</span>
             </p>
-            <button class="btn btn-danger" type="submit" id="btn-desc">DESCONECTAR</button>
+            <button id="desconectar">DESCONECTAR</button>
         </div>
     </nav>
 
@@ -25,7 +27,8 @@
 
     
 
-    <hr class="borda">
+    <hr class="borda1">
+    <hr class="borda2">
     <div class="tabela">
         <table>
             <table>
@@ -39,7 +42,7 @@
                         <th scope="col" class="item-center">EMAIL</th>
                         <th scope="col">USUÁRIO</th>
                         <th scope="col">SENHA</th>
-                        <th scope="col">vazio</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
             <tbody>
@@ -47,26 +50,26 @@
                     <td> <span class="th-title"> GERENTES </span> <br>
                         <span>01/01/2022</span> 
                     </td>
-                    <td>KAIKY</td>
+                    <td id="Kaiky">KAIKY</td>
                     <td class="dt-nasc">_/_/_</td>
                     <td>123456789-01</td>
                     <td>(11) 912345679</td>
                     <td>KAIKY.123@GMAIL.COM</td>
-                    <td>KAIKY123</td>
+                    <td id="KaikyUser">KAIKY123</td>
                     <td>********</td>
                     <td>
                         <button onclick="mostrar_modalAdmEditar()" type="button" class="btn" id="adicionar-agendamento" data-bs-toggle="modal">
-                            <img class="lapis" src="imagens/lapis.png" alt="lapis">
+                            <img class="lapis" src="imagens/lapisPreto.png" alt="lapis">
                         </button>
                         <button onclick="mostrar_modalAdmNovo()" type="button" class="btn" id="adicionar-agendamento" data-bs-toggle="modal">
-                            <img class="lapis" src="imagens/add.png" alt="lapis">
+                            <img class="lapis" src="imagens/addPreto.png" alt="lapis">
                         </button>
 
                         <div class="modal fade" id="modal_admNovo" tabindex="-1">
                             <div class="modal-dialog">
                               <div class="modal-content" style="color: black;">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="label_admEditar">NOVO GERENTE</h1>
+                                  <h1 class="modal-title fs-5" id="label_admEditarNG">NOVO GERENTE</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -106,7 +109,7 @@
                       
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">CRIAR PERFIL GERENTE</button>
+                                  <button type="button" id="criarGerente" class="btn btn-primary">CRIAR PERFIL GERENTE</button>
                                 </div>
                               </div>
                             </div>
@@ -115,7 +118,7 @@
                             <div class="modal-dialog">
                               <div class="modal-content" style="color: black;">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="label_admEditar">DADOS DO GERENTE</h1>
+                                  <h1 class="modal-title fs-5" id="label_admEditarG">DADOS DO GERENTE</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -155,7 +158,7 @@
                       
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">EDITAR DADOS</button>
+                                  <button type="button" id="editarDados" class="btn btn-primary">EDITAR DADOS</button>
                                 </div>
                               </div>
                             </div>
@@ -166,26 +169,26 @@
                     <td> <span class="th-title"> FUNCIONÁRIOS </span> <br>
                         <span>01/02/2022</span> 
                     </td>
-                    <td>AQUILES</td>
+                    <td id="Aquiles">AQUILES</td>
                     <td class="dt-nasc">_/_/_</td>
                     <td>123456789-02</td>
                     <td>(11) 812345679</td>
                     <td>AQUILES.123@GMAIL.COM</td>
-                    <td>AQUILES123</td>
+                    <td id="AquilesUser">AQUILES123</td>
                     <td>********</td>
                     <td>
                         <button onclick="mostrar_modalAdmEditarFuncionario()" type="button" class="btn" id="adicionar-agendamento" data-bs-toggle="modal">
-                            <img class="lapis" src="imagens/lapis.png" alt="lapis">
+                            <img class="lapis" src="imagens/lapisPreto.png" alt="lapis">
                         </button>
                         <button onclick="mostrar_modalAdmExcluirFuncionario()" type="button" class="btn" id="adicionar-agendamento" data-bs-toggle="modal">
-                            <img class="lixeira" src="imagens/lixeira.png" alt="lixeira">
+                            <img class="lixeira" src="imagens/lixeiraPreta.png" alt="lixeira">
                         </button>
 
                         <div class="modal fade" id="modal_admEditarFuncionario" tabindex="-1">
                             <div class="modal-dialog">
                               <div class="modal-content" style="color: black;">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="label_admEditar">DADOS DO FUNCIONÁRIO</h1>
+                                  <h1 class="modal-title fs-5" id="label_admEditarF">DADOS DO FUNCIONÁRIO</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -224,7 +227,7 @@
                                   </div>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">EDITAR DADOS</button>
+                                  <button type="button" id="editarDados" class="btn btn-primary">EDITAR DADOS</button>
                                 </div>
                               </div>
                             </div>
@@ -234,7 +237,7 @@
                             <div class="modal-dialog">
                               <div class="modal-content" style="color: black;">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="label_admEditar">EXCLUIR FUNCIONÁRIO</h1>
+                                  <h1 class="modal-title fs-5" id="label_admEditarEF">EXCLUIR FUNCIONÁRIO</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -256,7 +259,7 @@
                                   </div>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">EXCLUIR FUNCIONÁRIO</button>
+                                  <button type="button" id="excluirFuncionario" class="btn btn-primary">EXCLUIR FUNCIONÁRIO</button>
                                 </div>
                               </div>
                             </div>
@@ -268,26 +271,26 @@
                     <td> <span class="th-title"> CLIENTES </span> <br>
                         <span>02/02/2022</span> 
                     </td>
-                    <td>LUCAS</td>
+                    <td id="Lucas">LUCAS</td>
                     <td class="dt-nasc">_/_/_</td>
                     <td>123456789-03</td>
                     <td>(11) 812345677</td>
                     <td>LUCAS.123@GMAIL.COM</td>
-                    <td>LUCAS123</td>
+                    <td id="LucasUser">LUCAS123</td>
                     <td>********</td>
                     <td>
                         <button onclick="mostrar_modalAdmEditarCliente()" type="button" class="btn" id="adicionar-agendamento" data-bs-toggle="modal">
-                            <img class="lapis" src="imagens/lapis.png" alt="lapis">
+                            <img class="lapis" src="imagens/lapisPreto.png" alt="lapis">
                         </button>
                         <button onclick="mostrar_modalAdmExcluirCliente()" type="button" class="btn" id="adicionar-agendamento" data-bs-toggle="modal">
-                            <img class="lixeira" src="imagens/lixeira.png" alt="lixeira">
+                            <img class="lixeira" src="imagens/lixeiraPreta.png" alt="lixeira">
                         </button>
 
                         <div class="modal fade" id="modal_admEditarCliente" tabindex="-1">
                             <div class="modal-dialog">
                               <div class="modal-content" style="color: black;">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="label_admEditar">DADOS DO CLIENTE</h1>
+                                  <h1 class="modal-title fs-5" id="label_admEditarC">DADOS DO CLIENTE</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -326,7 +329,7 @@
                                   </div>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">EDITAR DADOS</button>
+                                  <button type="button" id="editarDados" class="btn btn-primary">EDITAR DADOS</button>
                                 </div>
                               </div>
                             </div>
@@ -336,7 +339,7 @@
                           <div class="modal-dialog">
                             <div class="modal-content" style="color: black;">
                               <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="label_admEditar">EXCLUIR FUNCIONÁRIO</h1>
+                                <h1 class="modal-title fs-5" id="label_admEditarEC">EXCLUIR CLIENTE</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
@@ -358,7 +361,7 @@
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">EXCLUIR CLIENTE</button>
+                                <button type="button" id="excluirCliente" class="btn btn-primary">EXCLUIR CLIENTE</button>
                               </div>
                             </div>
                           </div>
